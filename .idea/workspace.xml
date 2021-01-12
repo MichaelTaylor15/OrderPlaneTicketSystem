@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1827545-d7d3-49a9-bc00-03a13a2ae0eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/FlightDaoimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/mainUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao_impl/FlightServiceimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao_impl/IFlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message/Flight.java" afterDir="false" />
-    </list>
+    <list default="true" id="53e24b81-2b9c-4872-b5cf-844b1437b492" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
