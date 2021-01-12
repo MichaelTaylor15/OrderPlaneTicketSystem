@@ -1,3 +1,5 @@
+package Message;
+
 public class Customer {
     private String id;//与业务无关系
     private String name;

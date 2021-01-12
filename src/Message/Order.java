@@ -1,3 +1,5 @@
+package Message;
+
 import java.util.Date;
 public class Order {
     private float customerType;//乘客类型

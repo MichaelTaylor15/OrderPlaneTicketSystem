@@ -1,3 +1,7 @@
+package Interfaces;
+import Message.Flight;
+
+
 import java.util.Set;
 
 public interface IFlightDao {
