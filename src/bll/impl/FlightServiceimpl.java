@@ -2,10 +2,17 @@ package bll.impl;
 
 import bean.Flight;
 import bll.IFlightService;
+import dao.IFlightDao;
+import dao.impl.FlightDaoimpl;
 
 import java.util.Set;
 
 public class FlightServiceimpl implements IFlightService {
+
+    IFlightDao iFlightDao;
+    public FlightServiceimpl(){//dao层接口
+        iFlightDao=new FlightDaoimpl();
+    }
 
     @Override
     public void insertFlight(Flight flight) {
@@ -38,6 +45,11 @@ public class FlightServiceimpl implements IFlightService {
 
     }
 
+    public IFlightDao getiFlightDao() {
+        return iFlightDao;
+    }
 
-
+    public void setiFlightDao(IFlightDao iFlightDao) {
+        this.iFlightDao = iFlightDao;
+    }
 }
