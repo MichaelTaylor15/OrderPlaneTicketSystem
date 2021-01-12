@@ -1,6 +1,6 @@
-package dao_impl;
+package bll;
 
-import Message.Flight;
+import bean.Flight;
 
 import java.util.Set;
 

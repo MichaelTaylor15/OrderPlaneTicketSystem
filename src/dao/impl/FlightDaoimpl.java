@@ -1,10 +1,11 @@
-package dao_impl;
+package dao.impl;
 
-import Message.Flight;
+import bean.Flight;
+import dao.IFlightDao;
 
 import java.util.Set;
 
-public class FlightServiceimpl implements IFlightService{
+public class FlightDaoimpl implements IFlightDao {
     @Override
     public void insertFlight(Flight flight) {
 
