@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="53e24b81-2b9c-4872-b5cf-844b1437b492" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/mainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/mainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicketSystem/bll/impl/FlightServiceimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicketSystem/bll/impl/FlightServiceimpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bean/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bll/impl/FlightServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bll/impl/FlightServiceimpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,10 +120,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加座位信息" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="666" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1610453191371">
+    <state x="666" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1610456212370">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="666" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610453191371" />
+    <state x="666" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610456212370" />
     <state x="869" y="345" width="441" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1610423085465">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -143,22 +144,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="627" y="140" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1610349175618" />
-    <state width="1110" height="222" key="GridCell.Tab.0.bottom" timestamp="1610454261296">
+    <state width="1110" height="222" key="GridCell.Tab.0.bottom" timestamp="1610456100283">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1110" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1610454261296" />
-    <state width="1110" height="222" key="GridCell.Tab.0.center" timestamp="1610454261295">
+    <state width="1110" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1610456100283" />
+    <state width="1110" height="222" key="GridCell.Tab.0.center" timestamp="1610456100283">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1110" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1610454261295" />
-    <state width="1110" height="222" key="GridCell.Tab.0.left" timestamp="1610454261295">
+    <state width="1110" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1610456100283" />
+    <state width="1110" height="222" key="GridCell.Tab.0.left" timestamp="1610456100283">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1110" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1610454261295" />
-    <state width="1110" height="222" key="GridCell.Tab.0.right" timestamp="1610454261296">
+    <state width="1110" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1610456100283" />
+    <state width="1110" height="222" key="GridCell.Tab.0.right" timestamp="1610456100283">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1110" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1610454261296" />
+    <state width="1110" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1610456100283" />
     <state x="784" y="176" key="Vcs.Push.Dialog.v2" timestamp="1610444364521">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -167,5 +168,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="84" key="editAsTableFormatDialogDimension/0.0.1600.860@0.0.1600.860" timestamp="1610366874613" />
+    <state x="302" y="79" key="new project wizard" timestamp="1610456351575">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="302" y="79" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1610456351575" />
   </component>
 </project>

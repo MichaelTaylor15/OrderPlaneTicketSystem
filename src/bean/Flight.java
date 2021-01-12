@@ -96,4 +96,17 @@ public class Flight {
         System.out.println("传到Flight了！");
 
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "id='" + id + '\'' +
+                ", flightId='" + flightId + '\'' +
+                ", planType='" + planType + '\'' +
+                ", departureAirport='" + departureAirport + '\'' +
+                ", destnationAirport='" + destnationAirport + '\'' +
+                ", departureTime='" + departureTime + '\'' +
+                ", currentSeatsNum=" + currentSeatsNum +
+                '}';
+    }
 }

@@ -6,9 +6,11 @@ import bll.IFlightService;
 import java.util.Set;
 
 public class FlightServiceimpl implements IFlightService {
+
     @Override
     public void insertFlight(Flight flight) {
         System.out.println("flight传到bll了");
+        System.out.println(flight);
     }
 
     @Override
@@ -35,4 +37,7 @@ public class FlightServiceimpl implements IFlightService {
     public void undateFlight(Flight flight) {
 
     }
+
+
+
 }
