@@ -1,10 +1,30 @@
-package Message;
+package bean;
+
+import java.util.Date;
 
 public class Customer {
     private String id;//与业务无关系
     private String name;
     private String idCard;
     private String phone;
+    private Date birthday;
+    private Order order;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 
     public String getId() {
         return id;

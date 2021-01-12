@@ -1,13 +1,14 @@
-package Interfaces;
+package bll.impl;
 
-import Message.Flight;
+import bean.Flight;
+import bll.IFlightService;
 
 import java.util.Set;
 
-public class FlightDaoimpl implements  IFlightDao{
+public class FlightServiceimpl implements IFlightService {
     @Override
     public void insertFlight(Flight flight) {
-
+        System.out.println("flight传到bll了");
     }
 
     @Override

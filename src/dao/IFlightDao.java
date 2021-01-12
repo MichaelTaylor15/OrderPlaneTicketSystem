@@ -1,5 +1,5 @@
-package Interfaces;
-import Message.Flight;
+package dao;
+import bean.Flight;
 
 
 import java.util.Set;

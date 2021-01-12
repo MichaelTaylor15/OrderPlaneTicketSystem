@@ -1,6 +1,7 @@
-package Message;
+package bean;
 
-import java.util.Date;
+import bll.IFlightService;
+import bll.impl.FlightServiceimpl;
 
 public class Flight {
     private String id;//航班号
@@ -85,12 +86,13 @@ public class Flight {
     }
 
     public Flight(String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
-
         this.flightId=flightId;
         this.planType=planType;
         this.currentSeatsNum=currentSeatsNum;
         this.departureAirport=departureAirport;
         this.destnationAirport=destnationAirport;
         this.departureTime=departureTime;
+        System.out.println("传到Flight了！");
+
     }
 }
