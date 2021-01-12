@@ -85,7 +85,8 @@ public class Flight {
         currentSeatsNum = currentSeatsNum;
     }
 
-    public Flight(String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
+    public Flight(String id,String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
+        this.id=id;
         this.flightId=flightId;
         this.planType=planType;
         this.currentSeatsNum=currentSeatsNum;

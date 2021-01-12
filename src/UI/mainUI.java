@@ -5,6 +5,7 @@ import bll.IFlightService;
 import bll.impl.FlightServiceimpl;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 public class mainUI {
     public static void main(String[] args) {
@@ -21,6 +22,9 @@ public class mainUI {
             Scanner scanner=new Scanner(System.in);
             choice =scanner.nextInt();
             if (choice==1){
+                System.out.println("请输入航班信息:");
+                String id = UUID.randomUUID().toString();
+                System.out.println(id.replace("-",""));
                 System.out.print("请输入航班编号:");
                 String flightId=scanner.next();
                 System.out.print("请输入机型:");
@@ -33,8 +37,9 @@ public class mainUI {
                 String destinationAirport=scanner.next();
                 System.out.print("请输入起飞时间:");
                 String departureTime=scanner.next();
-                Flight flight=new Flight(flightId,flightType,currentSeats,departureAirport,destinationAirport,departureTime);
-                IFlightService iFlightService=new FlightServiceimpl();
+                Flight flight=new Flight(id,flightId,flightType,currentSeats,departureAirport,destinationAirport,departureTime);
+
+                IFlightService iFlightService=new FlightServiceimpl();//bll层
                 iFlightService.insertFlight(flight);
             }
             else if(choice==6){
