@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Flight {
     private String id;//航班号
+    private String flightId;
     private String planType;//机型
-    private String departureCity;//出发地
-    private String destnation;//目的地
-    private Date date;//出发日期
-    private String Seats;//座位
-    private String totalSeats;//总座位
+    private String departureAirport;//出发地
+    private String destnationAirport;//目的地
+    private String departureTime;//出发日期
+    private int  currentSeatsNum;//现存座位数
 
     public String getId() {
         return id;
@@ -20,27 +20,51 @@ public class Flight {
     }
 
     public String getDepartureCity() {
-        return departureCity;
+        return departureAirport;
     }
 
     public void setDepartureCity(String departureCity) {
-        this.departureCity = departureCity;
+        this.departureAirport = departureCity;
     }
 
     public String getDestnation() {
-        return destnation;
+        return destnationAirport;
     }
 
     public void setDestnation(String destnation) {
-        this.destnation = destnation;
+        this.destnationAirport = destnation;
     }
 
-    public Date getDate() {
-        return date;
+    public String getFlightId() {
+        return flightId;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+
+    public String getDepartureAirport() {
+        return departureAirport;
+    }
+
+    public void setDepartureAirport(String departureAirport) {
+        this.departureAirport = departureAirport;
+    }
+
+    public String getDestnationAirport() {
+        return destnationAirport;
+    }
+
+    public void setDestnationAirport(String destnationAirport) {
+        this.destnationAirport = destnationAirport;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
     }
 
     public String getPlanType() {
@@ -51,19 +75,22 @@ public class Flight {
         this.planType = planType;
     }
 
-    public String getSeats() {
-        return Seats;
+
+    public int getCurrentSeatsNum() {
+        return currentSeatsNum;
     }
 
-    public void setSeats(String seats) {
-        Seats = seats;
+    public void setCurrentSeatsNum(int  currentSeatsNum) {
+        currentSeatsNum = currentSeatsNum;
     }
 
-    public String getTotalSeats() {
-        return totalSeats;
-    }
+    public Flight(String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
 
-    public void setTotalSeats(String totalSeats) {
-        this.totalSeats = totalSeats;
+        this.flightId=flightId;
+        this.planType=planType;
+        this.currentSeatsNum=currentSeatsNum;
+        this.departureAirport=departureAirport;
+        this.destnationAirport=destnationAirport;
+        this.departureTime=departureTime;
     }
 }
