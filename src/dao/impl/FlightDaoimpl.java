@@ -3,10 +3,8 @@ package dao.impl;
 import bean.Flight;
 import dao.IFlightDao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.HashSet;
 import java.util.Set;
 
 public class FlightDaoimpl implements IFlightDao {
@@ -33,8 +31,26 @@ public class FlightDaoimpl implements IFlightDao {
     }
 
     @Override
-    public Set<Flight> getAllFlight() {
-        return null;
+    public Set<Flight>  getAllFlight() throws SQLException {
+        Set<Flight> allFlight=new HashSet<Flight>();
+        String url="jdbc:oracle:thin:@localhost:1521:orcl";
+        String username="opts";
+        String password="opts1234";
+        Connection connecttion=DriverManager.getConnection(url,username,password);
+        String sql="SELECT * FROM flight";//sql语句
+        PreparedStatement pstmt=connecttion.prepareStatement(sql);
+        ResultSet rs=pstmt.executeQuery();
+        while(rs.next()){
+            String id=rs.getString("ID");
+            String flightId=rs.getString("FLIHJT_ID");
+            String planeType=rs.getString("PLANE_TYPE");
+            int currentSeatNum=rs.getInt("TOTAL_SEATS_NUM");
+            String departureAirport=rs.getString("DEPARTURE_AIRPORT ");
+            String destinationAirport=rs.getString("DESTINATION_AIRPORT");
+            String departureTime=rs.getString("DEPARTURE_TIME");
+            Flight flight=new Flight(id,flightId,planeType,currentSeatNum,departureAirport,destinationAirport,departureTime);
+        }
+        return allFlight;
     }
 
     @Override

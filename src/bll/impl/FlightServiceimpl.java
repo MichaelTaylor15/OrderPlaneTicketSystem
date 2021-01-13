@@ -18,11 +18,13 @@ public class FlightServiceimpl implements IFlightService {
     @Override
     public void insertFlight(Flight flight) throws SQLException {
        iFlightDao.insertFlight(flight);
+
     }
 
     @Override
-    public Set<Flight> getAllFlight() {
-        return null;
+    public Set<Flight> getAllFlight() throws SQLException {
+
+        return iFlightDao.getAllFlight();
     }
 
     @Override

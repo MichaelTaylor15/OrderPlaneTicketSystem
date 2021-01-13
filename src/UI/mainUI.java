@@ -6,6 +6,7 @@ import bll.impl.FlightServiceimpl;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.UUID;
 
 public class mainUI {
@@ -46,6 +47,15 @@ public class mainUI {
                 }
                 catch(Exception e){
                     System.out.println("Error:"+e);
+                }
+            }
+            else if (choice==2){
+                //Flight flight =new Flight();
+                IFlightService iFlightService=new FlightServiceimpl();
+               Set<Flight> flights= iFlightService.getAllFlight();
+                //System.out.println(flight);
+                for (Flight f:flights){
+                    System.out.println(flights);
                 }
             }
             else if(choice==6){
