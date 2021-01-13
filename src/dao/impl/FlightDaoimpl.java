@@ -16,9 +16,10 @@ public class FlightDaoimpl implements IFlightDao {
         String username="opts";
         String password="opts1234";
         Connection connection= DriverManager.getConnection(url,username,password);
-        System.out.println(connection);
 
-        String sql="INSER INTO flight VALUES(?,?,?,?,?,?,?)";//用？代替，七个参数
+        //System.out.println(connection);//测试oracle是否链接成功
+
+        String sql="INSERT INTO flight VALUES(?,?,?,?,?,?,?)";//用？代替，七个参数
         PreparedStatement pstmt=connection.prepareStatement(sql);
         pstmt.setString(1,flight.getId());//1代表第一项
         pstmt.setString(2,flight.getFlightId());
