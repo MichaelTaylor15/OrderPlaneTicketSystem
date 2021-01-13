@@ -52,11 +52,17 @@ public class mainUI {
             else if (choice==2){
                 //Flight flight =new Flight();
                 IFlightService iFlightService=new FlightServiceimpl();
-               Set<Flight> flights= iFlightService.getAllFlight();
-                //System.out.println(flight);
-                for (Flight f:flights){
-                    System.out.println(flights);
-                }
+               try{
+                   Set<Flight> allFlight= iFlightService.getAllFlight();
+                   //System.out.println(flight);Set遍历使用迭代器
+                   for (Flight flight:allFlight){
+                       System.out.println(flight);
+                   }
+               }
+               catch (SQLException e){
+                   //System.out.println(e);
+                    e.printStackTrace();
+               }
             }
             else if(choice==6){
                 System.exit(0);

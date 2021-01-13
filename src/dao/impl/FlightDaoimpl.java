@@ -32,23 +32,38 @@ public class FlightDaoimpl implements IFlightDao {
 
     @Override
     public Set<Flight>  getAllFlight() throws SQLException {
-        Set<Flight> allFlight=new HashSet<Flight>();
+        Set<Flight> allFlight=new HashSet<>();
         String url="jdbc:oracle:thin:@localhost:1521:orcl";
         String username="opts";
         String password="opts1234";
         Connection connecttion=DriverManager.getConnection(url,username,password);
+        //System.out.println(connecttion);
         String sql="SELECT * FROM flight";//sql语句
+        //System.out.println(sql);
         PreparedStatement pstmt=connecttion.prepareStatement(sql);
+        //System.out.println(pstmt);
         ResultSet rs=pstmt.executeQuery();
-        while(rs.next()){
+        //System.out.println(rs);
+        while(rs.next()){//获取表中信息通过Flight构造方法给flight，添加到集合flight中，并返回集合；
+
             String id=rs.getString("ID");
-            String flightId=rs.getString("FLIHJT_ID");
+
+            String flightId=rs.getString("FLIGHT_ID");
+
             String planeType=rs.getString("PLANE_TYPE");
+
             int currentSeatNum=rs.getInt("TOTAL_SEATS_NUM");
-            String departureAirport=rs.getString("DEPARTURE_AIRPORT ");
+
+            String departureAirport=rs.getString("DEPARTURE_AIRPORT");
+            //出错地
+            //System.out.println(123);测试前有错
             String destinationAirport=rs.getString("DESTINATION_AIRPORT");
+
             String departureTime=rs.getString("DEPARTURE_TIME");
+
             Flight flight=new Flight(id,flightId,planeType,currentSeatNum,departureAirport,destinationAirport,departureTime);
+
+            allFlight.add(flight);
         }
         return allFlight;
     }
