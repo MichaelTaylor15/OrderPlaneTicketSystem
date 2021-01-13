@@ -2,10 +2,11 @@ package bll;
 
 import bean.Flight;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public interface IFlightService {
-    void insertFlight(Flight flight);
+    void insertFlight(Flight flight) throws SQLException;
     Set<Flight> getAllFlight();
     Flight getFlightByDepartureTime(String departure);//获取航班起飞时间
     Flight getFlightBydepartureAirPort(String departureAirPort);//获取航班起飞机场

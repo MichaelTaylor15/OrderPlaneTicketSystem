@@ -20,28 +20,20 @@ public class Flight {
         this.id = id;
     }
 
-    public String getDepartureCity() {
-        return departureAirport;
-    }
-
-    public void setDepartureCity(String departureCity) {
-        this.departureAirport = departureCity;
-    }
-
-    public String getDestnation() {
-        return destnationAirport;
-    }
-
-    public void setDestnation(String destnation) {
-        this.destnationAirport = destnation;
-    }
-
     public String getFlightId() {
         return flightId;
     }
 
     public void setFlightId(String flightId) {
         this.flightId = flightId;
+    }
+
+    public String getPlanType() {
+        return planType;
+    }
+
+    public void setPlanType(String planType) {
+        this.planType = planType;
     }
 
     public String getDepartureAirport() {
@@ -68,24 +60,15 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public String getPlanType() {
-        return planType;
-    }
-
-    public void setPlanType(String planType) {
-        this.planType = planType;
-    }
-
-
     public int getCurrentSeatsNum() {
         return currentSeatsNum;
     }
 
-    public void setCurrentSeatsNum(int  currentSeatsNum) {
-        currentSeatsNum = currentSeatsNum;
+    public void setCurrentSeatsNum(int currentSeatsNum) {
+        this.currentSeatsNum = currentSeatsNum;
     }
 
-    public Flight(String id,String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
+    public Flight(String id, String flightId, String planType, int currentSeatsNum, String departureAirport, String destnationAirport, String departureTime){
         this.id=id;
         this.flightId=flightId;
         this.planType=planType;
@@ -93,7 +76,7 @@ public class Flight {
         this.departureAirport=departureAirport;
         this.destnationAirport=destnationAirport;
         this.departureTime=departureTime;
-        System.out.println("传到Flight了！");
+
 
     }
 
