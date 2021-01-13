@@ -5,6 +5,7 @@ import bll.IFlightService;
 import dao.IFlightDao;
 import dao.impl.FlightDaoimpl;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public class FlightServiceimpl implements IFlightService {
@@ -12,17 +13,18 @@ public class FlightServiceimpl implements IFlightService {
     IFlightDao iFlightDao;
     public FlightServiceimpl(){//dao层接口
         iFlightDao=new FlightDaoimpl();
+    }//构造方法
+
+    @Override
+    public void insertFlight(Flight flight) throws SQLException {
+       iFlightDao.insertFlight(flight);
+
     }
 
     @Override
-    public void insertFlight(Flight flight) {
-        System.out.println("flight传到bll了");
-        System.out.println(flight);
-    }
+    public Set<Flight> getAllFlight() throws SQLException {
 
-    @Override
-    public Set<Flight> getAllFlight() {
-        return null;
+        return iFlightDao.getAllFlight();
     }
 
     @Override

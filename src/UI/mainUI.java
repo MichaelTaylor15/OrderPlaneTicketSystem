@@ -4,11 +4,13 @@ import bean.Flight;
 import bll.IFlightService;
 import bll.impl.FlightServiceimpl;
 
+import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.UUID;
 
 public class mainUI {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         while(true){
             System.out.println("请根据提示信息进行操作！");
             System.out.println("按1,录入航班信息");
@@ -40,7 +42,27 @@ public class mainUI {
                 Flight flight=new Flight(id,flightId,flightType,currentSeats,departureAirport,destinationAirport,departureTime);
 
                 IFlightService iFlightService=new FlightServiceimpl();//bll层
-                iFlightService.insertFlight(flight);
+                try{
+                    iFlightService.insertFlight(flight);
+                }
+                catch(Exception e){
+                    System.out.println("Error:"+e);
+                }
+            }
+            else if (choice==2){
+                //Flight flight =new Flight();
+                IFlightService iFlightService=new FlightServiceimpl();
+               try{
+                   Set<Flight> allFlight= iFlightService.getAllFlight();
+                   //System.out.println(flight);Set遍历使用迭代器
+                   for (Flight flight:allFlight){
+                       System.out.println(flight);
+                   }
+               }
+               catch (SQLException e){
+                   //System.out.println(e);
+                    e.printStackTrace();
+               }
             }
             else if(choice==6){
                 System.exit(0);

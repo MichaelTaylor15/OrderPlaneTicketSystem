@@ -8,7 +8,7 @@ public class Flight {
     private String flightId;
     private String planType;//机型
     private String departureAirport;//出发地
-    private String destnationAirport;//目的地
+    private String destinationAirport;//目的地
     private String departureTime;//出发日期
     private int  currentSeatsNum;//现存座位数
 
@@ -20,28 +20,20 @@ public class Flight {
         this.id = id;
     }
 
-    public String getDepartureCity() {
-        return departureAirport;
-    }
-
-    public void setDepartureCity(String departureCity) {
-        this.departureAirport = departureCity;
-    }
-
-    public String getDestnation() {
-        return destnationAirport;
-    }
-
-    public void setDestnation(String destnation) {
-        this.destnationAirport = destnation;
-    }
-
     public String getFlightId() {
         return flightId;
     }
 
     public void setFlightId(String flightId) {
         this.flightId = flightId;
+    }
+
+    public String getPlanType() {
+        return planType;
+    }
+
+    public void setPlanType(String planType) {
+        this.planType = planType;
     }
 
     public String getDepartureAirport() {
@@ -53,11 +45,11 @@ public class Flight {
     }
 
     public String getDestnationAirport() {
-        return destnationAirport;
+        return destinationAirport;
     }
 
     public void setDestnationAirport(String destnationAirport) {
-        this.destnationAirport = destnationAirport;
+        this.destinationAirport = destnationAirport;
     }
 
     public String getDepartureTime() {
@@ -68,45 +60,36 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public String getPlanType() {
-        return planType;
-    }
-
-    public void setPlanType(String planType) {
-        this.planType = planType;
-    }
-
-
     public int getCurrentSeatsNum() {
         return currentSeatsNum;
     }
 
-    public void setCurrentSeatsNum(int  currentSeatsNum) {
-        currentSeatsNum = currentSeatsNum;
+    public void setCurrentSeatsNum(int currentSeatsNum) {
+        this.currentSeatsNum = currentSeatsNum;
     }
 
-    public Flight(String id,String flightId,String planType,int currentSeatsNum,String departureAirport,String destnationAirport,String departureTime){
+    public Flight(String id, String flightId, String planType, int currentSeatsNum, String departureAirport, String destinationAirport, String departureTime){
         this.id=id;
         this.flightId=flightId;
         this.planType=planType;
         this.currentSeatsNum=currentSeatsNum;
         this.departureAirport=departureAirport;
-        this.destnationAirport=destnationAirport;
+        this.destinationAirport=destinationAirport;
         this.departureTime=departureTime;
-        System.out.println("传到Flight了！");
+
 
     }
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "id='" + id + '\'' +
-                ", flightId='" + flightId + '\'' +
-                ", planType='" + planType + '\'' +
-                ", departureAirport='" + departureAirport + '\'' +
-                ", destnationAirport='" + destnationAirport + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                ", currentSeatsNum=" + currentSeatsNum +
-                '}';
+        id=id.replace("-","");
+        return
+                "id:" + id  +
+                ", 航班编号:" + flightId  +
+                ", 机型:" + planType  +
+                ", 起飞机场:" + departureAirport  +
+                ", 目的地机场:" + destinationAirport  +
+                ", 起飞时间:" + departureTime  +
+                ", 当前空座位:" + currentSeatsNum ;
     }
 }
