@@ -69,7 +69,8 @@ public class FlightDaoimpl implements IFlightDao {
     }
 
     @Override
-    public Flight getFlightByDepartureTime(String departure) {
+    public Flight getFlightByDepartureTime(String departure) {//按起飞时间查询
+
         return null;
     }
 
