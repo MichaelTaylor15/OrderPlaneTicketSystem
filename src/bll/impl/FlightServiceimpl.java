@@ -34,13 +34,14 @@ public class FlightServiceimpl implements IFlightService {
     }
 
     @Override
-    public Flight getFlightBydepartureAirPort(String departureAirPort) {
-        return null;
+    public Flight getFlightBydepartureAirPort(String departureAirPort) throws SQLException {
+        return iFlightDao.getFlightBydepartureAirPort(departureAirPort);
     }
 
     @Override
-    public Flight getFlightByDestinationAirPort(String detinationAirPort) {
-        return null;
+    public Flight getFlightByDestinationAirPort(String destinationAirPort) throws SQLException {
+
+        return iFlightDao.getFlightByDestinationAirPort(destinationAirPort);
     }
 
     @Override

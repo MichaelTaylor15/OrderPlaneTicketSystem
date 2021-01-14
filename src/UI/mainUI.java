@@ -51,6 +51,7 @@ public class mainUI {
             }
             else if (choice==2){
                 //Flight flight =new Flight();
+                //String input=scanner.next();
                 IFlightService iFlightService=new FlightServiceimpl();
                try{
                    Set<Flight> allFlight= iFlightService.getAllFlight();
@@ -75,16 +76,30 @@ public class mainUI {
                     String departureTime;
                     departureTime=scanner.next();
                     IFlightService iFlightService=new FlightServiceimpl();
-                    Flight flight =iFlightService.getFlightByDepartureTime(departureTime);//接受查询到的信息
-                    System.out.println(flight);
+                    Flight   flight =iFlightService.getFlightByDepartureTime(departureTime);//接受查询到的信息
+                        System.out.println(flight);
+
+
                 }
                 else if(choose==2){
+                    System.out.print("请输入起飞机场:");
+                    String departrueAirport=scanner.next();
 
+                    IFlightService iFlightService=new FlightServiceimpl();
+                    Flight flight = iFlightService.getFlightBydepartureAirPort(departrueAirport);
+                    System.out.println(flight);
                 }
                 else if(choose==3){
+                    System.out.print("请输入目的地机场:");
+                    String destinationAirport=scanner.next();
 
+                    IFlightService iFlightService=new FlightServiceimpl();
+                    Flight flight = iFlightService.getFlightBydepartureAirPort(destinationAirport);
+                    System.out.println(flight);
                 }
             }
+
+
             else if(choice==6){
                 System.exit(0);
             }

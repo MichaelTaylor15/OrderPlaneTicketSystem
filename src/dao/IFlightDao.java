@@ -10,7 +10,7 @@ public interface IFlightDao {
     Set<Flight> getAllFlight() throws SQLException;
     Flight getFlightByDepartureTime(String departureTime) throws SQLException;//获取航班起飞时间
     Flight getFlightBydepartureAirPort(String departureAirPort) throws SQLException;//获取航班起飞机场
-    Flight getFlightByDestinationAirPort(String detinationAirPort);//获取航班目的地机场
+    Flight getFlightByDestinationAirPort(String destinationAirPort) throws SQLException;//获取航班目的地机场
     void undateFlight(Flight flight);//更新航班
 
 }
