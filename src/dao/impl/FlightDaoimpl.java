@@ -102,7 +102,33 @@ public class FlightDaoimpl implements IFlightDao {
     }
 
     @Override
-    public Flight getFlightBydepartureAirPort(String departureAirPort) {
+    public Flight getFlightBydepartureAirPort(String departureAirPort) throws SQLException {
+        String url="jdbc:oracle:thin:@localhost:1521:orcl";
+        String username="opts";
+        String password="opts1234";
+        Connection connection= DriverManager.getConnection(url,username,password);
+        Flight flight =null;
+        String sql="SELECT ID,FLIGHT_ID,PLANE_TYPE,\n" + "TOTAL_SEATS_NUM,\n" + "DESTINATION_AIRPORT,DEPARTURE_TIME FROM flight \n"+"DEPARTURE_TIME"+ "WHERE DEPARTURE_AIRPORT=?";
+        PreparedStatement ptmt= connection.prepareStatement(sql);
+        ptmt.setString(1,departureAirPort);
+        ResultSet rs=ptmt.executeQuery();
+        while(rs.next()){
+
+            String id=rs.getString("ID");
+
+            String flightId=rs.getString("FLIGHT_ID");
+
+            String planeType=rs.getString("PLANE_TYPE");
+
+            int currentSeatNum=rs.getInt("TOTAL_SEATS_NUM");
+
+            String departureTime=rs.getString("DEPARTURE_AIRPORT");
+
+            String destinationAirport=rs.getString("DESTINATION_AIRPORT");
+
+            String departureTime1=rs.getString("DEPARTURE_TIME");
+
+            flight=new Flight(id,flightId,planeType,currentSeatNum,departureAirport,destinationAirport,departureTime);
         return null;
     }
 

@@ -84,7 +84,7 @@ public class Flight {
     public String toString() {
         id=id.replace("-","");
         return
-                "id:" + id  +
+                "flight:"+"id:" + id  +
                 ", 航班编号:" + flightId  +
                 ", 机型:" + planType  +
                 ", 起飞机场:" + departureAirport  +
