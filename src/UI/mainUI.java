@@ -64,6 +64,27 @@ public class mainUI {
                     e.printStackTrace();
                }
             }
+            else if(choice==3){
+                System.out.println("请根据提示信息输入！");
+                System.out.println("按1，根据起飞时间查询");
+                System.out.println("按2，根据起飞机场查询");
+                System.out.println("按3，根据目的地机场查询");
+                int choose=scanner.nextInt();
+                if(choose==1){
+                    System.out.print("请输入要查询的时间段:");
+                    String departureTime;
+                    departureTime=scanner.next();
+                    IFlightService iFlightService=new FlightServiceimpl();
+                    Flight flight =iFlightService.getFlightByDepartureTime(departureTime);//接受查询到的信息
+                    System.out.println(flight);
+                }
+                else if(choose==2){
+
+                }
+                else if(choose==3){
+
+                }
+            }
             else if(choice==6){
                 System.exit(0);
             }
